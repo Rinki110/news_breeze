@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/screen_background"
+    tools:context=".view.ArticleDetailsFragment">
+
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/placeholder"
+        android:contentDescription="@string/app_name"
+        />
+
+    <include
+         android:id="@+id/toolbar"
+         layout="@layout/toolbar"
+         android:layout_width="match_parent"
+         android:layout_height="?attr/actionBarSize"
+         android:layout_marginTop="16dp"
+
+         />
+
+    <ImageView
+        android:id="@+id/imageIconSave"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentEnd="true"
+        app:cornerRadius="@dimen/button_corner_radius"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_save_inactive" />
+
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:textSize="16sp"
+        android:textColor="@color/article_details_title"
+        tools:text="date" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDate"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textColor="@color/article_details_title"
+        tools:text="Article Title" />
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/tvTitle">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgViewAuthor"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            app:srcCompat="@drawable/author_image"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+            app:strokeWidth= "@dimen/article_corner_radius"
+            android:contentDescription="@string/app_name"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/button_active"
+            android:text="@string/news_save_btn_name"
+            android:textAllCaps="false"
+            android:textColor="@color/button_text"
+            app:cornerRadius="@dimen/button_corner_radius" />
+
+        <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_toEndOf="@id/imgViewAuthor"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@+id/btnSave"
+            android:textSize="@dimen/text_title"
+            android:text="Not Available"
+            android:textColor="@color/text"
+            tools:text="Author" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tvAuthor"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/imgViewAuthor"
+            android:layout_toStartOf="@+id/btnSave"
+            android:textSize="@dimen/text_title"
+            android:textColor="@color/date_text"
+            android:text="Lorem Ipsum"
+            tools:text="Type" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imgViewAuthor"
+            android:layout_margin="30dp"
+            android:textSize="@dimen/text_title"
+            android:textColor="@color/text"
+            tools:text="Description" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

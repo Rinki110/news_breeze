@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="@dimen/card_corner_radius"
+    android:background="@color/screen_background"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/placeholder"
+            android:contentDescription="@string/app_name"
+            />
+
+      <!--  <com.google.android.material.imageview.ShapeableImageView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:srcCompat="@drawable/placeholder"
+
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+            app:strokeWidth= "@dimen/article_corner_radius"
+            android:contentDescription="@string/app_name"/>-->
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgView"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textSize="@dimen/text_title"
+            android:textColor="@color/text"
+            tools:text="Article Title" />
+
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/tvTitle"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+
+            tools:text="description" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/tvDescription"
+            android:textColor="@color/date_text"
+            tools:text="date" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_below="@+id/tvDate"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRead"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textAllCaps="false"
+                android:text="@string/news_read_btn_name"
+                style="?attr/borderlessButtonStyle"
+                app:cornerRadius="@dimen/button_corner_radius"
+                android:textColor="@color/button_text"
+                android:backgroundTint="@color/button_active"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/news_save_btn_name"
+                android:textAllCaps="false"
+                style="?attr/borderlessButtonStyle"
+                app:cornerRadius="@dimen/button_corner_radius"
+                android:textColor="@color/button_text"
+                android:backgroundTint="@color/button_active"
+                />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/imageIconSave"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentEnd="true"
+            app:cornerRadius="@dimen/button_corner_radius"
+            android:background="@color/button_inactive"
+            app:srcCompat="@drawable/ic_save_inactive" />
+
+        <View
+            style="@style/DividerStyle"
+            android:layout_below="@+id/buttonLayout" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+

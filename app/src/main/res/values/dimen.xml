@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_corner_radius">4dp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
+    <dimen name="text_title">16sp</dimen>
+    <dimen name="article_corner_radius">10dp</dimen>
+    <dimen name="background_corner_radius">50dp</dimen>
+    <dimen name="background_corner_for_saved">20dp</dimen>
+</resources>

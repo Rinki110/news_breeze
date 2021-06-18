@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewsBreezer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="news_read_btn_name">Read</string>
+    <string name="news_save_btn_name">Save</string>
+
+</resources>
